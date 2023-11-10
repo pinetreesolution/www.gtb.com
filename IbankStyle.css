@@ -1,0 +1,258 @@
+﻿
+.popover_button_yes {
+    background-color: #417505;
+    color: #ffffff;
+    -ms-border-radius: 0px !important;
+    border-radius: 0px !important;
+    border: none !important;
+    padding: 10px !important;
+    font-family: Arial !important;
+    height: 32px !important;
+    /*font-weight: bold !important;*/
+    font-size: 12px !important;
+    line-height: 16px !important;
+}
+
+.popover_button_skip {
+    border: 1px solid #417505;
+    background-color: #ffffff;
+    color: #417505;
+    -ms-border-radius: 0px !important;
+    border-radius: 0px !important;
+    padding: 10px !important;
+    font-family: Arial !important;
+    height: 32px !important;
+    /*font-weight: bold !important;*/
+    font-size: 12px !important;
+    line-height: 16px !important;
+}
+
+.text_notification {
+    font-family: Verdana !important;
+    font-size: 11px !important;
+}
+
+.pop_header {
+    background-color: #F5F5F5;
+    color: #000000;
+    min-height: 10px !important;
+    /*height: 50px !important;*/
+    line-height: 20px !important;
+    font-weight: bolder;
+    font-size: 12px !important;
+    font-family: Arial !important;
+}
+
+.btn_notification {
+    background-color: #D94F00 !important;
+    color: #ffffff !important;
+    -ms-border-radius: 0px !important;
+    border-radius: 0px !important;
+    /*height: 20px !important;*/
+    font-size: 10px !important;
+    line-height: 7px !important;
+}
+
+.modal-title {
+    font-weight: bolder;
+    font-size: 11px !important;
+}
+
+.notification_close_button {
+    color: #B6B5B5 !important;
+    cursor:pointer;
+}
+
+.bpop {
+    width: 382px !important;
+    height: auto !important;
+}
+
+.modal-body {
+    font-family: Arial !important;
+    color: #000000 !important;
+    line-height: 16px !important;
+}
+
+.modal-content {
+    -ms-border-radius: 0px !important;
+    border-radius: 0px !important;
+    border: none;
+}
+
+.modal-content-extension {
+    margin: auto !important;
+    margin-top: 40% !important;
+    -ms-border-radius: 0px !important;
+    border-radius: 0px !important;
+}
+
+.reduce_width_byforce {
+    width: 96% !important;
+}
+
+.home_body {
+    background-color: #F7F6F6 !important;
+    border: 2px solid #F0EFEF !important;
+}
+
+.margin_div {
+    margin-left: 8% !important;
+    width: 100% !important;
+}
+
+.no_border_table {
+    border: none !important;
+    border-top: none !important;
+}
+
+.text-align-center {
+    text-align: center;
+    font-family: "Verdana";
+    font-size: 11px !important;
+    font-weight: bold;
+    height: 20px !important;
+    margin: auto !important;
+    cursor: pointer;
+}
+
+.expand_text {
+    padding: 10px !important;
+    margin-right: 40px !important;
+    color: #8F8F8F !important;
+    font-weight: bold;
+    font-family: Verdana !important;
+    font-size: 10px !important;
+}
+
+.calender {
+    height: 210px !important;
+    font-size: small !important;
+}
+
+.btn_new_card_apply {
+    color: #ffffff;
+    background-color: #417505;
+    -ms-border-radius: 0px !important;
+    border-radius: 0px !important;
+    width: 190px !important;
+    height: 28px !important;
+    line-height: 1;
+}
+
+.align_table_to_modal {
+    margin-top: -15px !important;
+    width: 540px !important;
+    margin-left: -15px !important;
+}
+
+.text_notification_card_pick_up {
+    font-family: Verdana !important;
+    font-size: 13px !important;
+    line-height: 1.5;
+    letter-spacing: 0px;
+}
+
+.faint-font {
+    color: #6E6E6E !important;
+}
+
+.calender-click {
+    text-align: center !important;
+    background-color: #dd4f05;
+    width: 10px !important;
+    height: 10px !important;
+    color: #ffffff;
+    -ms-border-radius: 50% !important;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50% !important;
+    padding: 3px !important;
+}
+
+.show-bg {
+    background-color: transparent !important;
+   
+}
+.modal-backdrop {
+    z-index: 1 !important;
+}
+
+.ie .margin-left
+{
+    margin-left:60px;
+    width:600px;
+}
+
+.margin-left
+{
+}
+
+.ie .margin-bottom-send-wishes
+{
+    margin-bottom:0px;
+}
+.margin-bottom-send-wishes
+{
+    margin-bottom:14px;
+}
+.chrome .margin-bottom-send-wishes
+{
+     margin-bottom:14px !important;
+}
+
+
+.modal-table-align
+{
+    width: 600px !important;
+}
+.ie .modal-table-align
+{
+    width: 600px !important;
+}
+
+.overlay {
+    background: #e9e9e9;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+#loading-img {
+    background: url(../images/loading.gif) center center no-repeat;
+    height: 100%;
+    z-index: 1100;
+}
+/*.panel-default {
+    border-color: #ddd;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -ms-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+.panel-footer {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    -ms-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -ms-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}*/
+
+

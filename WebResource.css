@@ -1,0 +1,105 @@
+.SMParent 
+{
+	background-color: #B5C7D6; 
+	font:bold 8pt Tahoma; 
+	color:#2A4256; 
+	text-align:left; 
+	text-decoration: none; 
+	height:20px; 
+	border-top:1px solid white; 
+	border-bottom:1px solid white; 
+	padding-top:2px; 
+	padding-left:6px; 
+	box-sizing:border-box; 
+	-moz-box-sizing:border-box;
+} 
+.SMParentOver 
+{
+	background-color: #B5C7D6; 
+	font:bold 8pt Tahoma; 
+	color:#2A4256; 
+	text-align:left; 
+	text-decoration: none; 
+	cursor:pointer; 
+	height:20px; 
+	border-top:1px solid white; 
+	border-bottom:1px solid white; 
+	padding-top:2px; padding-left:6px; 
+	box-sizing:border-box; 
+	-moz-box-sizing:border-box;
+} 
+.SMParentSelected 
+{
+	background-color: #B5C7D6; 
+	font:bold 8pt Tahoma; 
+	color:#2A4256; 
+	text-align:left; 
+	text-decoration: none; 
+	height:20px; 
+	border-top:1px solid white; 
+	border-bottom:1px solid white; 
+	padding-top:2px; 
+	padding-left:6px; 
+	box-sizing:border-box; 
+	-moz-box-sizing:border-box;
+} 
+.SMChild 
+{
+	font:8pt Tahoma; 
+	color:#114477; 
+	text-decoration:none; 
+	padding-left: 12px; 
+	text-align:left;
+} 
+.SMChild a, 
+.SMChild a:hover 
+{
+	color:#114477; 
+	font:8pt Tahoma;
+	text-decoration:none;
+} 
+.SMChildOver 
+{
+	font:8pt Tahoma; 
+	color:#0000FF; 
+	text-decoration:underline; 
+	padding-left: 12px; 
+	text-align:left; 
+	cursor:hand; 
+	cursor:pointer;
+} 
+.SMChildOver a, 
+.SMChildOver a:hover 
+{
+	color:#0000FF; 
+	font:8pt Tahoma; 
+	text-decoration:underline; 
+	cursor:pointer; 
+	cursor:hand;
+} 
+.SMChildSelected 
+{
+	font:bold 8pt Tahoma; 
+	color:#4A6276; 
+	text-decoration:none; 
+	padding-left: 12px; 
+	text-align:left;
+} 
+.SMChildSelected a,
+.SMChildSelected a:hover 
+{
+	color:#4A6276; 
+	font:bold 8pt Tahoma; 
+	text-decoration:none;
+} 
+.SMChildrenBox 
+{
+	background-color: white;
+	border-left: 1px solid #B5C7D6;
+} 
+.SMMenu 
+{
+	background-color:white; 
+	width: 170px; 
+	overflow:hidden;
+}

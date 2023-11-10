@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+<html class="gecko firefox firefox119 firefox119_0 win js orientation_landscape maxw_1280"><head id="ctl00_ctl00_Head1">
+    <title>Guaranty Trust Bank: Internet Banking</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="MSHTML 6.00.2800.1106" name="GENERATOR">
+    <script type="text/javascript" src="wall_files/ruxitagentjs_ICA27NQVfghqrux_10277231024135831.js" data-dtconfig="rid=RID_117733278|rpid=1350652431|domain=gtbank.com|reportUrl=/ibank3/rb_bf99867ejf|app=0d833403a42edc23|featureHash=ICA27NQVfghqrux|msl=153600|vcv=2|rdnt=0|uxrgce=1|bp=3|cuc=pbl34hhz|srms=2,1,0,0%2Ftextarea%2Cinput%2Cselect%2Coption;0%2Fdatalist;0%2Fform%20button;0%2F%5Bdata-dtrum-input%5D;0%2F.data-dtrum-input;1%2F%5Edata%28%28%5C-.%2B%24%29%7C%24%29|mel=100000|dpvc=1|md=mdcc1=a#lblUserName,mdcc2=a#id^e^dqlblUserName^dq,mdcc3=a#lblBVN,mdcc4=a#id^e^dqibIBVN^dq,mdcc5=dgclid,mdcc6=c_zlcmid,mdcc7=c__zlcmid,mdcc8=c__zlcprivacy|ssv=4|lastModification=1699575997694|tp=500,50,0,1|agentUri=/ibank3/ruxitagentjs_ICA27NQVfghqrux_10277231024135831.js"></script><script src="wall_files/css_browser_selector.js"></script>
+    <script type="text/javascript" src="wall_files/prototype.js"></script>
+    <script src="wall_files/jquery.1.11.js" type="text/javascript"></script>
+    <script src="wall_files/bootstrap.js"></script>
+    <script type="text/javascript" src="wall_files/scriptaculous.js"></script><script type="text/javascript" src="wall_files/effects.js"></script>
+    <script type="text/javascript" src="wall_files/modalbox.js"></script>
+    <script src="wall_files/jquery-3.6.js"></script> 
+    <script src="wall_files/aes.js"></script>
+    <script src="wall_files/crypto-js.js"></script>
+
+    <link href="wall_files/bootstrap.css" rel="stylesheet">
+
+    <link href="wall_files/IbankStyle.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="wall_files/modalbox.css" type="text/css" media="screen">
+
+    <link href="wall_files/Main.css" rel="stylesheet" type="text/css">
+    <link href="wall_files/responsive-tabs.css" rel="stylesheet" type="text/css">
+    <link href="wall_files/responsive-tables.css" rel="stylesheet" type="text/css">
+
+    <link href="wall_files/chosen.css" rel="stylesheet" type="text/css">
+    <link href="wall_files/jquery.keypad.css" rel="stylesheet" type="text/css">
+
+    <script src="wall_files/responsive-tables.js" type="text/javascript"></script>
+    <script src="wall_files/chosen.jquery.min.js" type="text/javascript"></script>
+    <script src="wall_files/respond.min.js" type="text/javascript"></script>
+    <script src="wall_files/jquery-ui.min.js" type="text/javascript"></script>
+
+    <link href="wall_files/bootstrap-daterangepicker-bs3.css" rel="stylesheet">
+    <script src="wall_files/moment.js"></script>
+    <script src="wall_files/bootstrap-daterangepicker.js"></script>
+
+
+    <script src="wall_files/jquery.plugin.min.js"></script>
+    <script src="wall_files/jquery.keypad.min.js"></script>
+    <script src="wall_files/IbankScript.js"></script>
+
+    <script type="text/javascript">
+        function fix_chars(textBox) {
+            var strVal;
+            var strVal1;
+            var i;
+            strVal1 = ""
+            strVal = textBox.value
+            for (i = 0; i < strVal.length; i++) {
+                if ((strVal.substring(i, i + 1).indexOf('0') > -1) || (strVal.substring(i, i + 1).indexOf("1") > -1) || (strVal.substring(i, i + 1).indexOf("2") > -1) || (strVal.substring(i, i + 1).indexOf("3") > -1) || (strVal.substring(i, i + 1).indexOf("4") > -1) || (strVal.substring(i, i + 1).indexOf("5") > -1) || (strVal.substring(i, i + 1).indexOf("6") > -1) || (strVal.substring(i, i + 1).indexOf("7") > -1) || (strVal.substring(i, i + 1).indexOf("8") > -1) || (strVal.substring(i, i + 1).indexOf("9") > -1)) {
+                    strVal1 = strVal1 + strVal.substring(i, i + 1)
+                }
+            }
+            textBox.value = strVal1
+        }
+
+
+        function fix_chars2(textBox) {
+            //textBox.value = textBox.value.replace(/[@'&_,%`"*#|<>;]/g, "");
+            var strVal;
+            var strVal1;
+            var strVal2;
+            var dot;
+            var i;
+            var strComma;
+            strVal2 = "";
+            strComma = "";
+            strVal1 = "";
+            strVal = textBox.value;
+            dot = 0;
+            for (i = 0; i < strVal.length; i++) {
+                if (strVal.substring(i, i + 1).indexOf('.') > -1) {
+                    dot = dot + 1;
+                }
+                if ((strVal.substring(i, i + 1).indexOf('0') > -1) || (strVal.substring(i, i + 1).indexOf("1") > -1) || (strVal.substring(i, i + 1).indexOf("2") > -1) || (strVal.substring(i, i + 1).indexOf("3") > -1) || (strVal.substring(i, i + 1).indexOf("4") > -1) || (strVal.substring(i, i + 1).indexOf("5") > -1) || (strVal.substring(i, i + 1).indexOf("6") > -1) || (strVal.substring(i, i + 1).indexOf("7") > -1) || (strVal.substring(i, i + 1).indexOf("8") > -1) || (strVal.substring(i, i + 1).indexOf("9") > -1) || ((strVal.substring(i, i + 1).indexOf('.') > -1) && dot <= 1)) {
+                    strVal1 = strVal1 + strVal.substring(i, i + 1)
+                }
+            }
+            if ((strVal1.indexOf('.') == 0)) {
+                strVal1 = "0" + strVal1;
+            }
+            if (strVal1.indexOf('.') > 0) {
+                if (((strVal1.length) - (strVal1.indexOf('.') + 1)) > 2) {
+                    strVal1 = strVal1.substring(0, strVal1.indexOf('.') + 3);
+                }
+            }
+
+            strVal = "";
+            if (strVal1.indexOf('.') != -1) {
+
+                strVal = strVal1.substring(strVal1.indexOf('.'), strVal1.indexOf('.') + 3);
+                strVal1 = strVal1.substring(0, strVal1.indexOf('.'));
+            }
+            //	    	        alert(strVal1.indexOf('.'));
+
+            while (strVal1.length > 0) {
+                if (strVal1.length > 3) {
+                    strVal2 = strVal1.substring(strVal1.length - 3, strVal1.length) + strComma + strVal2;
+                    strVal1 = strVal1.substring(0, strVal1.length - 3);
+                    strComma = ",";
+                }
+                else {
+                    strVal2 = strVal1 + strComma + strVal2;
+                    strVal1 = "";
+                }
+            }
+
+            //	    	    if (strVal.length>0){
+            //	    	    strVal= strVal;
+            //	    	    }
+
+            if (strVal2.indexOf('.') > 0) {
+                strVal2 = strVal2.substring(0, strVal2.indexOf('.'));
+                alert(strVal2);
+            }
+
+            textBox.value = strVal2 + strVal;
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+        var clicked = false;
+        function CheckBrowser() {
+            if (clicked == false) {
+                //Browser closed
+            }
+            else {
+                //redirected 
+                clicked = false;
+            }
+        }
+
+        function bodyUnload() {
+            if (clicked == false)//browser is closed
+            {
+                //var request = GetRequest();
+
+                //location.href="/KB/tips/LogOut.aspx";
+                var request = GetRequest();
+
+                request.open("GET", "../LogOut.aspx", true);
+                request.send();
+            }
+        }
+        function GetRequest() {
+            var xmlHttp = null;
+            try {
+                // Firefox, Opera 8.0+, Safari
+                xmlHttp = new XMLHttpRequest();
+            }
+            catch (e) {
+                //Internet Explorer
+                try {
+                    xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch (e) {
+                    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+            return xmlHttp;
+        }
+
+        //]]>
+    </script>
+
+    <script type="text/javascript">
+        window.onload = getclienttime();
+        function getclienttime() {
+            var currentTime = new Date()
+            var month = currentTime.getMonth() + 1
+            var day = currentTime.getDate()
+            var hourofday = currentTime.getHours()
+            var year = currentTime.getFullYear()
+            document.cookie = "hourofday= " + hourofday;
+        }
+
+    </script>
+
+
+</head>
+<body onunload="bodyUnload();" onclick="clicked=true;" oncontextmenu="return false">
+    
+    <form name="main" method="post" action="Main.aspx" id="main">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="h_pro7" id="h_pro7" value="">
+<input type="hidden" name="h_pro7scroll" id="h_pro7scroll" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+
+<script type="text/javascript">
+<!--
+var theForm = document.forms['main'];
+if (!theForm) {
+    theForm = document.main;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+// -->
+</script>
+
+
+<script src="wall_files/WebResource.js" type="text/javascript"></script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9039061F">
+<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0">
+<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0">
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Ve93TEtaLIg6pvoQY1gcmjdDICbdx5/9wMHRnGggarnhwxhyxrMfhQV/J8itp9VVwSAt6BTM5ycIL5P7RT/oN+VlHwkmQWCI3QMylAiOr/S76hiZZYTKqRlm24GKPPH3ADp3eJ6WcK/qMytc2hk7jB5ItfF4vm4YKjwvmEovGuvEwLlyYgeR6sbx3X5LEMUT1zw1fJgIVAUIUOrnyl4qxq9XDKEm7ZSqpmnqNC5DJZTlEqpYdihfbfUMhhX30i+siMwdY7bOl/YcK06GOrjIq7oDhD/Lwv44IRh/ZFLuFK4AaCfv7ZR6+5/9EtzMo3fs7UInVNv4nNqWsWj6MyyM+qWctTGcIATYidy1lhz4+YiMbX/e">
+        <!-- Start of Toolbar -->
+        <div id="master">
+            <div class="header">
+                <div class="logo"></div>
+				<a id="imghome" title="Go back to Home Page" href="javascript:__doPostBack('imghome','')">
+                 <div id="homebtn"></div></a>
+
+                <div id="ibtext"></div>
+            </div>
+            <div class="topBar">
+                <div class="dateBox">
+                    <span id="CurDate1_lblTodayDate" style="color:White;font-family:Arial;font-size:9pt;font-weight:bold;width:480px;">Friday, November 10, 2023</span>
+
+                </div>
+                <div class="topMenu">
+                    
+    <div class="topMenuLeftNew">
+        <a class="topMenuLeftNewAnchor" href="https://ibank.gtbank.com/ibank3/main.aspx?sm=m_a">Airtime Purchase</a>
+    </div>
+    <div class="topMenuLeftNew">
+            <a class="topMenuLeftNewAnchor" href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_d">Transfer To GTBank</a>
+        </div>
+    <div class="topMenuLeftNew">
+        <a class="topMenuLeftNewAnchor" href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_f">Transfer To Other Banks(NIP)</a>
+    </div>
+    <div class="topMenuLeftNew">
+            <a class="topMenuLeftNewAnchor" href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_f">Bills Payments</a>
+        </div>
+
+    
+	<div class="topMenuRight">
+    <a id="HorizontalMenu1_lbtnLogOff" title="Log off Internet Banking" href="javascript:__doPostBack('HorizontalMenu1$lbtnLogOff','')">Log Off</a>
+
+	</div>
+                </div>
+            </div>
+            
+            <div id="pageContent">
+                <div id="sidebarLeft">
+                    <div id="mobileNav" class="smartphone">
+                        <p>SHOW NAVIGATION</p>
+                    </div>
+                    <input name="Navbar1:searchText" type="text" id="Navbar1_searchText" class="searchInput ui-autocomplete-input" placeholder="What would you like to do today?" autocomplete="off"><input type="submit" name="Navbar1:searchIt" value="Go!" id="Navbar1_searchIt" class="searchInputButton">
+
+<div id="navMenu">
+    <link type="text/css" href="wall_files/WebResource.css" rel="StyleSheet" media="all"><div id="pro7" style="visibility: visible;" class="SMMenu"><div id="a" class="SMParentSelected"><a href="" title=""></a>My Accounts</div><div id="__a" class="SMChildrenBox" style="overflow: auto; height: 300px; display: block;"><div id="a_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_b" title="View book and available balances on your account(s)"><div>Balance Enquiry</div></a></div><div id="a_j" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_j" title="Display transactions on your account for a specified date range"><div>Transaction Details</div></a></div><div id="a_a" class="SMChildSelected"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_a" title="Enables you to display statement for any of your profiled account for a specified period. It also provide the option to export to Excel or PDF format. Stamped and signed statements are also available."><div>Account Statement</div></a></div><div id="a_l" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_l" title="Allows you to create an additional savings account"><div>Additional Account</div></a></div><div id="a_n" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_n" title="This allows a Customer to Add or Remove Account"><div>Account Profile Maintenance</div></a></div><div id="o_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=o_a" title="This function allows you to define up to five covering account"><div>GT Sweep Service</div></a></div><div id="a_d" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_d" title="Enables you to view the details of your account manager"><div>My Account Manager</div></a></div><div id="a_r" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_r" title="SME Appointment"><div>SME Appointment</div></a></div><div id="g_o" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_o" title="BVN Linker"><div>BVN Linker</div></a></div><div id="a_x" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_x" title="Send Statement to Embassy"><div>Send Statement to Embassy</div></a></div><div id="a_y" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_y" title="Send Statement to Thirdparty"><div>Send Statement to Thirdparty</div></a></div><div id="a_u" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_u" title="NRN Referral"><div>Refer a Non-Resident Nigerian</div></a></div><div id="a_h" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=a_h" title="Enables you to send secure email requests to your Account Officer or our Funds Transfer Unit"><div>Secure E-mail</div></a></div></div><div id="e" class="SMParent"><a href="" title=""></a>Account Transfers&nbsp;<span class="badge">new</span></div><div id="__e" class="SMChildrenBox" style="overflow: auto; height: 487px; display: none;"><div id="e_s" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_s" title="Receive Cash"><div>Request Cash</div></a></div><div id="e_x" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_x" title="Delete Beneficiary"><div>Delete Beneficiary</div></a></div><div id="e_c" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_c" title="Enables Beneficiaries to Erroroneous Transfer to Return Received Funds"><div>Return Erroneous Transfer</div></a></div><div id="g_q" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_q" title="To enable customers increase/decrease their transfer limit"><div>Transfer Limit Change&nbsp;<span class="badge">new</span></div></a></div><div id="d_f" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=d_f" title="Transfer funds between your accounts"><div>Own Account Transfer</div></a></div><div id="e_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_b" title="Transfer funds to your regisered beneficiary (GTBank A/C holders). Hardware token not required"><div>Pre-registered Transfer</div></a></div><div id="e_d" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_d" title="Enables you to transfer from your profiled accounts to any other GTbank A/C holder up to a maximum of N5,000,000.00 cummulative transfers per day. Hardware token is required to complete the transaction"><div>Transfer to GTBank A/C</div></a></div><div id="e_f" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_f" title="Instant Payment to Other Banks"><div>Transfer to Other Banks (Instant)</div></a></div><div id="e_z" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_z" title="Instant Transfer to Other Financial Institutions"><div>Transfer to Other Financial Institutions&nbsp;<span class="badge">new</span></div></a></div><div id="e_g" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_g" title="Enables you to transfer from your profiled accounts to another account in other banks up to a maximum of N5,000,000.00 cummulative transfers per day. Hardware token is required to complete the transaction"><div>Transfer to Other Banks (NEFT)</div></a></div><div id="e_p" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_p" title="Transfer Via Phone Number"><div>Transfer Via Phone/Email</div></a></div><div id="d_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=d_b" title="This feature enable you to setup a direct debit instruction on any of your profiled account to credit another GTBank account for a preset amount and duration"><div>Standing Order to GTBank A/C</div></a></div><div id="e_1" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_1" title="This feature enable you to setup a one-off direct debit instruction on any of your profiled account to credit another GTBank account for a preset amount and duration"><div>Schedule Future Payment to GTBank A/c&nbsp;<span class="badge">new</span></div></a></div><div id="e_2" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_2" title="This feature enable you to setup a one-off direct debit instruction on any of your profiled account to credit an account in another Bank for a preset amount and duration"><div>Schedule Future Payment to Other Bank(s)&nbsp;<span class="badge">new</span></div></a></div><div id="d_c" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=d_c" title="This feature enable you to setup a direct debit instruction on any of your profiled account to credit an account in another Bank for a preset amount and duration"><div>Standing Order to Other Bank(s)  </div></a></div><div id="g_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_b" title="Transfer funds to a named beneficiary, which can be collected at any specified GTBank branch.   Hardware token is required to complete the transaction"><div>Cash In Transit</div></a></div><div id="g_e" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_e" title="Request for draft issuance  for a named beneficiary, which can be collected at any specified  GTBank branch. Hardware token is required to complete the transaction"><div>Draft In Transit</div></a></div><div id="v_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=v_a" title="Enables user create a token for cardless withdrawal at GTBank ATMs"><div>737 Cash</div></a></div><div id="e_u" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=e_u" title="Withdraw Cash/Make Payment"><div>Paycode</div></a></div></div><div id="9" class="SMParent"><a href="" title=""></a>eNaira Transfer&nbsp;<span class="badge">new</span></div><div id="__9" class="SMChildrenBox" style="overflow: auto; height: 78px; display: none;"><div id="9_1" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=9_1" title="CBN eNaira Transfers"><div>eNaira Transfers&nbsp;<span class="badge">new</span></div></a></div><div id="z_1" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=z_1" title="To register for E-naira wallet"><div>E-Naira Onboarding&nbsp;<span class="badge">new</span></div></a></div><div id="z_2" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=z_2" title="To get E-Naira Wallet Details"><div>E-Naira Wallet Details&nbsp;<span class="badge">new</span></div></a></div></div><div id="b" class="SMParent"><a href="" title=""></a>Cards</div><div id="__b" class="SMChildrenBox" style="overflow: auto; height: 346px; display: none;"><div id="b_e" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_e" title="Log Dispense Error"><div>Dispense Error</div></a></div><div id="b_l" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_l" title="Request For Card Hotlisting"><div>Card Hotlist</div></a></div><div id="b_k" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_k" title="Request For Card Replacement"><div>Card Replacement</div></a></div><div id="b_m" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_m" title="change pickup branch"><div>Change Pick Up Branch</div></a></div><div id="b_n" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_n" title="Card Enquiry"><div>Card Enquiry</div></a></div><div id="b_i" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_i" title="Pin Retrieval"><div>Pin Retrieval</div></a></div><div id="b_r" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_r" title="View Block Funds"><div>View Block Funds</div></a></div><div id="b_s" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_s" title="Virtual Card Request"><div>Virtual Card Request</div></a></div><div id="c_p" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=c_p" title="Card Statement"><div>Card Statement</div></a></div><div id="w_r" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=w_r" title="Account Linking/Delinking"><div>Account Linking/Delinking</div></a></div><div id="b_p" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_p" title="Dollar Card Request"><div>Dollar Card Request</div></a></div><div id="b_t" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_t" title="Request for Transaction Blocking"><div>Card Protect</div></a></div><div id="w_y" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=w_y" title="Third Party Card Pick up"><div>Third Party Card Pick up</div></a></div><div id="b_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=b_a" title="Card Subscription"><div>Card Subscription</div></a></div><div id="c_r" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=c_r" title="Enables Customers to Opt-Out of automatic card renewal"><div>Card Renewal Opt-Out</div></a></div></div><div id="m" class="SMParent"><a href="" title=""></a>Airtime &amp; Data Bundle</div><div id="__m" class="SMChildrenBox" style="overflow: auto; height: 47px; display: none;"><div id="m_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=m_a" title="AirTime Purchase"><div>AirTime Purchase</div></a></div><div id="m_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=m_b" title="Data Bundle"><div>Data Bundle</div></a></div></div><div id="p" class="SMParent"><a href="" title=""></a>Electricity Payment&nbsp;<span class="badge">new</span></div><div id="__p" class="SMChildrenBox" style="overflow: auto; height: 423px; display: none;"><div id="p_v" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_v" title="Abuja Disco"><div>Abuja Disco</div></a></div><div id="p_n" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_n" title="IBEDC Postpaid Payment"><div>IBEDC Postpaid Payment</div></a></div><div id="p_m" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_m" title="IBEDC Prepaid Payment"><div>IBEDC Prepaid Payment</div></a></div><div id="p_3" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_3" title="Port Harcourt BuyPower Prepaid"><div>PH BuyPower Prepaid</div></a></div><div id="p_2" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_2" title="Port Harcourt BuyPower Postpaid"><div>PH BuyPower Postpaid</div></a></div><div id="p_1" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_1" title="Enugu BuyPower Postpaid"><div>Enugu BuyPower Prepaid</div></a></div><div id="p_x" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_x" title="Enugu BuyPower Postpaid"><div>Enugu BuyPower Postpaid</div></a></div><div id="p_u" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_u" title="Jos BuyPower Postpaid"><div>Jos BuyPower Postpaid</div></a></div><div id="p_s" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_s" title="Kano BuyPower Postpaid"><div>Kano BuyPower Postpaid</div></a></div><div id="p_p" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_p" title="Kaduna BuyPower Postpaid"><div>Kaduna BuyPower Postpaid</div></a></div><div id="p_q" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_q" title="Kaduna BuyPower Prepaid"><div>Kaduna BuyPower Prepaid</div></a></div><div id="p_t" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_t" title="Kano BuyPower Prepaid"><div>Kano BuyPower Prepaid</div></a></div><div id="p_w" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_w" title="Jos BuyPower Prepaid"><div>Jos BuyPower Prepaid</div></a></div><div id="p_6" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_6" title="Ikeja Electricity Payment"><div>Ikeja Electricity Payment</div></a></div><div id="p_7" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_7" title="Eko Electricity Payment"><div>Eko Electricity Payment</div></a></div><div id="p_8" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_8" title="DLight Solar Energy"><div>DLight Solar Energy&nbsp;<span class="badge">new</span></div></a></div><div id="p_9" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=p_9" title="Retrieve your Electricity"><div>Token Retrieval&nbsp;<span class="badge">new</span></div></a></div><div id="t_p" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=t_p" title="BEDC Payment"><div>BEDC&nbsp;<span class="badge">new</span></div></a></div></div><div id="f" class="SMParent"><a href="" title=""></a>Payments &amp; Collections</div><div id="__f" class="SMChildrenBox" style="overflow: auto; height: 346px; display: none;"><div id="f_d" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_d" title="Enables GTBank Customers transfer directly to their GTHomes account"><div>GTHomes</div></a></div><div id="f_f" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_f" title="Online bill payment. Online payment is currently available for MTN Postpaid,Starcomms Internet Service,HITV etc"><div>Quickteller</div></a></div><div id="f_n" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_n" title="Online Bills Payments via NIP"><div>NIBSS Ebills Payments</div></a></div><div id="f_q" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_q" title="School Fees"><div>School Fees</div></a></div><div id="f_t" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_t" title="Subscription"><div>Subscription</div></a></div><div id="f_u" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_u" title="Other Payments"><div>Other Payments</div></a></div><div id="f_x" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_x" title="Church Payments"><div>Church Payments</div></a></div><div id="f_z" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_z" title="Investment"><div>Stock and Investments</div></a></div><div id="f_s" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_s" title="Travels &amp;Transportation / Logistics"><div>Travels &amp;Transportation / Logistics</div></a></div><div id="f_v" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_v" title="Events and Ticketing"><div>Events and Ticketing</div></a></div><div id="f_e" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_e" title="International Airtime"><div>International Airtime</div></a></div><div id="f_y" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_y" title="Toll Fees(LCC)"><div>Toll Fees(LCC)</div></a></div><div id="f_o" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_o" title="Sports and Gaming"><div>Sports and Gaming</div></a></div><div id="f_l" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_l" title="Financial Institutions"><div>Financial Institutions</div></a></div><div id="f_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=f_a" title="Quick payment"><div>Quick payment</div></a></div></div><div id="u" class="SMParent"><a href="" title=""></a>Cable TV</div><div id="__u" class="SMChildrenBox" style="overflow: auto; height: 24px; display: none;"><div id="u_p" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=u_p" title="Cable TV"><div>Cable TV</div></a></div></div><div id="3" class="SMParent"><a href="" title=""></a>Remita Payment</div><div id="__3" class="SMChildrenBox" style="overflow: auto; height: 24px; display: none;"><div id="3_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=3_a" title="Remita Payment"><div>Remita Payment</div></a></div></div><div id="1" class="SMParent"><a href="" title=""></a>Quick Loans&nbsp;<span class="badge">new</span></div><div id="__1" class="SMChildrenBox" style="overflow: auto; height: 287px; display: none;"><div id="1_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=1_a" title="Make an online request for Salary Advance. Instant credit for pre-qualified customers, for others view the status of your request"><div>Salary Advance</div></a></div><div id="1_v" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=1_v" title="Apply for a premium advance facility with the bank"><div>Premium Advance</div></a></div><div id="1_w" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=1_w" title="Make an online request for Travel Advance. Instant credit for pre-qualified customers, for others view the status of your request"><div>Travel Advance</div></a></div><div id="1_g" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=1_g" title="Make an online request for Quick Loan. Instant credit for pre-qualified customers, for others view the status of your request"><div>Quick Credit</div></a></div><div id="5_g" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=5_g" title="Loan Liquidation"><div>Loan Liquidation</div></a></div><div id="1_c" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=1_c" title="View details of your existing investments and loans with the bank"><div>Loans and Investment Status</div></a></div><div id="1_i" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=1_i" title="Loan Request Status"><div>Loan Request Status</div></a></div><div id="i_J" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=i_J" title="Loan Protect"><div>Loan Protect&nbsp;<span class="badge">new</span></div></a></div><div id="i_9" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=i_9" title="Make an online request for Hub Credit"><div>Hub Credit&nbsp;<span class="badge">new</span></div></a></div><div id="1_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=1_b" title="Retrieve Max Advance history. Download your offer letter and GSI"><div>Max Advance History</div></a></div><div id="1_j" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=1_j" title="  Request for a max advance facility"><div>Max Advance&nbsp;<span class="badge">new</span></div></a></div><div id="y_2" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=y_2" title="Quick Credit Profiler"><div>Quick Credit Profiling Request&nbsp;<span class="badge">new</span></div></a></div></div><div id="2" class="SMParent"><a href="" title=""></a>Insurance(Bancassurance)</div><div id="__2" class="SMChildrenBox" style="overflow: auto; height: 24px; display: none;"><div id="2_g" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=2_g" title="3RD PARTY INSURANCE (AXA MANSARD)"><div>3RD PARTY INSURANCE (AXA MANSARD)</div></a></div></div><div id="h" class="SMParent"><a href="" title=""></a>FX Transactions&nbsp;<span class="badge">new</span></div><div id="__h" class="SMChildrenBox" style="overflow: auto; height: 119px; display: none;"><div id="h_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=h_b" title="Allow you to sell your foreign currencies in exchange for the Naira without physcially coming to the bank, and your Naira account is credited immediately. You can sell up to a maximum of 50,000.00 dollars or its equivalent per day.The exchange is done at "><div>FX Sales </div></a></div><div id="h_c" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=h_c" title="Enables you to transfer FX from your profiled domiciliary accounts to any other GTbank domiciliary A/C holder up to a maximum of $10,000.00  or its equivalent per day.This service is available under the transfer group menu.  Hardware token is required to "><div>FX Transfer to any GTBank A/C</div></a></div><div id="h_d" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=h_d" title="With this function, you can request for FX Transfer to any pre-registered beneficiary account in other banks, including off-shore bank. This service is available under the request group menu. You require a token to pre-register and initiate an FX transfer"><div>FX Transfer to other Banks</div></a></div><div id="h_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=h_a" title="With this function you can request for an FX Draft"><div>FX Draft Request</div></a></div><div id="6_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=6_a" title="FxRates Table"><div>FxRates&nbsp;<span class="badge">new</span></div></a></div></div><div id="c" class="SMParent"><a href="" title=""></a>Cheques</div><div id="__c" class="SMChildrenBox" style="overflow: auto; height: 70px; display: none;"><div id="c_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=c_b" title="Request for new cheque book"><div>Request New Cheque Book</div></a></div><div id="c_c" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=c_c" title="Allow you to stop cheque that you have issued from being paid"><div>Stop Cheque </div></a></div><div id="c_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=c_a" title="Enables you to confirm your cheque online without the need for the bank to call you for confirmation"><div>Confirm Cheque </div></a></div></div><div id="n" class="SMParent"><a href="" title=""></a>Airlines &amp; Travels&nbsp;<span class="badge">new</span></div><div id="__n" class="SMChildrenBox" style="overflow: auto; height: 167px; display: none;"><div id="n_c" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=n_c" title="Airline Ticket Payment. Airlines include British Airways,Lufthansa and Delta Airlines. Customers are expected to have booked for the flight on the Airline Website to obatin their flight details before making payment on Internet Banking"><div>Airline Ticket Payments</div></a></div><div id="n_g" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=n_g" title="You can pay for your U.S. Visa fee online. Your payment receipt is automatically sent to your registered mail box, and  it is also available for download at any time. You require a hardware token to complete the transaction"><div>US VISA</div></a></div><div id="n_h" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=n_h" title="Local and International Hotel Bookings"><div>Bookings.Com (Hotels)</div></a></div><div id="n_d" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=n_d" title="Hotel.Ng"><div>Hotels.Ng(Local)</div></a></div><div id="n_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=n_b" title="GIGM bus booking"><div>GIGM Bus Booking</div></a></div><div id="n_e" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=n_e" title="Travel Insurance Schengen"><div>Travel Insurance Schengen&nbsp;<span class="badge">new</span></div></a></div><div id="n_z" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=n_z" title="Travel Insurance Worldwide"><div>Travel Insurance Worldwide&nbsp;<span class="badge">new</span></div></a></div></div><div id="i" class="SMParent"><a href="" title=""></a>Trade&nbsp;<span class="badge">new</span></div><div id="__i" class="SMChildrenBox" style="overflow: auto; height: 119px; display: none;"><div id="i_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=i_a" title="Enables you pay for your customs duties online. A reference number is generated at the end of the transaction, which you take to any of our branches to print your receipt. Hardware token is required"><div>Import Duty Payment</div></a></div><div id="i_c" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=i_c" title="CBN Electronic Form M"><div>Electronic Form M</div></a></div><div id="i_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=i_b" title="Enables merchants download their POS transaction reports"><div>POS Transaction Report</div></a></div><div id="i_e" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=i_e" title="E-Auction Module"><div>E-Auction Module</div></a></div><div id="i_f" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=i_f" title="Simplified NIPOST Payment"><div>Simplified NIPOST Payment&nbsp;<span class="badge">new</span></div></a></div></div><div id="x" class="SMParent"><a href="" title=""></a>Money Manager&nbsp;<span class="badge">new</span></div><div id="__x" class="SMChildrenBox" style="overflow: auto; height: 50px; display: none;"><div id="x_y" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=x_y" title="View a summary of all your income and expenditure till date under the lifestyle manager"><div>Personal Finance Dashboard</div></a></div><div id="y_f" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=y_f" title="Book Fixed Deposit"><div>Book Fixed Deposit&nbsp;<span class="badge">new</span></div></a></div></div><div id="g" class="SMParent"><a href="" title=""></a>Self Service&nbsp;<span class="badge">new</span></div><div id="__g" class="SMChildrenBox" style="overflow: auto; height: 469px; display: none;"><div id="g_g" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_g" title="Change your Internet Banking password. The password must be numeric and minimum of 6 digits"><div>Password Change</div></a></div><div id="g_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_a" title="Add or remove any of the Internet Banking services from your profile without going to any of our branches to request for it. Hardware token / Soft Token (i.e. *737*7#) is required"><div>Add Service(s)</div></a></div><div id="g_f" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_f" title="Confirm NEFT Debit instructions on your account"><div>NEFT Debit Confirmation</div></a></div><div id="g_j" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_j" title="Profile and activate your account(s) for e-Mail and/or SMS transaction alerts"><div>Transaction Alert Activation</div></a></div><div id="g_k" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_k" title="Create a GT-Target account which enables you save towards a specific target - whether it’s a wedding, holiday, new car or higher education. You would also be able to set up a standing order instruction to achieve your financial goal"><div>GT-Target Account</div></a></div><div id="g_m" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_m" title="Deactivate your Hardware Token device. Kindly note that you cannot reactivate a deactivated Token"><div>Deactivate Token</div></a></div><div id="g_n" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_n" title="Reset your secret answer if you forgot it or wish to change it to another one"><div>Reset Secret Question and Answer</div></a></div><div id="l_i" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=l_i" title="Track the status of your cheque book, card request or dispense error claim initiated in-Branch or on this platform"><div>Request Tracking</div></a></div><div id="g_w" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_w" title="Confirm or reject any reference request that you have given someone for account opening purposes"><div>Reference Confirmation</div></a></div><div id="g_x" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_x" title="Customer Information Update"><div>Customer Information Update</div></a></div><div id="s_s" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=s_s" title="The Spend to save account enables you to save a percentage of everything you spend on your account. It helps save without realising it, and you earn an addional interest if you dont take out of the money after a year. Click to set up a Spend2Save account now"><div>Spend2Save</div></a></div><div id="g_aa" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_aa" title="WeFund"><div>WeFund</div></a></div><div id="g_za" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_za" title="To set Bills As Recurring Payment and to Cancel "><div>Recurring Bills</div></a></div><div id="g_s" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_s" title="Account Upgrade"><div>Account Upgrade</div></a></div><div id="g_v" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_v" title="Account Switch"><div>Account Switch-Off/On</div></a></div><div id="3_a1" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=3_a1" title="Opt in and out of birthday notification on Ibank"><div>Birthday Opt-In Opt-Out</div></a></div><div id="1_d" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=1_d" title="Credit Report"><div>Credit Report&nbsp;<span class="badge">new</span></div></a></div><div id="g_6" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_6" title="Request for your relationship letters to be sent to your mail address"><div>Relationship Letters&nbsp;<span class="badge">new</span></div></a></div><div id="z_3" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=z_3" title="To do minimal BVN update"><div>BVN Update&nbsp;<span class="badge">new</span></div></a></div><div id="g_4" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=g_4" title="Signature Confirmation"><div>Signature Confirmation</div></a></div></div><div id="j" class="SMParent"><a href="" title=""></a>GT Assets</div><div id="__j" class="SMChildrenBox" style="overflow: auto; height: 24px; display: none;"><div id="j_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=j_a" title="Enables you to apply for GTBank assets on Ballot"><div>Ballot request</div></a></div></div><div id="5" class="SMParent"><a href="" title=""></a>Investments&nbsp;<span class="badge">new</span></div><div id="__5" class="SMChildrenBox" style="overflow: auto; height: 96px; display: none;"><div id="5_c" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=5_c" title="Treasury Bills Rate"><div>Treasury Bills Rate</div></a></div><div id="5_y" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=5_y" title="View bonds and investment"><div>Bond and Investment</div></a></div><div id="y_h" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=y_h" title="Make an online request for Quick Cover"><div>Quick Cover&nbsp;<span class="badge">new</span></div></a></div><div id="5_e" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=5_e" title="Investment Letter"><div>Investment Letter</div></a></div></div><div id="t" class="SMParent"><a href="" title=""></a>Tax and Levies</div><div id="__t" class="SMChildrenBox" style="overflow: auto; height: 208px; display: none;"><div id="t_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=t_a" title="LASG RevPay (Bill Reference)"><div>LASG RevPay (Bill Reference)</div></a></div><div id="t_b" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=t_b" title="Ebonyi State (IGR) Collections"><div>Ebonyi State (IGR) Collections</div></a></div><div id="t_c" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=t_c" title="DELTA STATE GOVERNMENT - IGR"><div>DELTA STATE GOVERNMENT - IGR</div></a></div><div id="t_d" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=t_d" title="PAYGATE LASG"><div>PAYGATE LASG</div></a></div><div id="t_e" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=t_e" title="NNPC/NAPIMS-NIPEX Payments"><div>NNPC/NAPIMS-NIPEX Payments</div></a></div><div id="t_f" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=t_f" title="NIGER STATE BOARD OF INT.REV."><div>NIGER STATE BOARD OF INT.REV.</div></a></div><div id="t_g" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=t_g" title="NNPC ABA Remittance"><div>NNPC ABA Remittance</div></a></div><div id="t_m" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=t_m" title="Immigration Passport Payment"><div>Immigration Passport Payment/FRSC</div></a></div><div id="t_h" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=t_h" title="NMCN"><div>NMCN</div></a></div></div><div id="s" class="SMParent"><a href="" title=""></a>SKS Banking</div><div id="__s" class="SMChildrenBox" style="overflow: auto; height: 116px; display: none;"><div id="s_o" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=s_o" title="SKS Standing Order"><div>SKS Standing Order</div></a></div><div id="s_t" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=s_t" title="SKS Teen Card"><div>SKS Teen Card</div></a></div><div id="s_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=s_a" title="SKS Account Information Update"><div>SKS Account Information Update</div></a></div><div id="s_u" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=s_u" title="Allows Kids who turns 18 in 6months time to upgrade their account"><div>SKS Account Upgrade</div></a></div><div id="s_p" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=s_p" title="SKS Account Opening"><div>SKS Account Opening</div></a></div></div><div id="o" class="SMParent"><a href="" title=""></a>Shipping and Distributors</div><div id="__o" class="SMChildrenBox" style="overflow: auto; height: 47px; display: none;"><div id="o_s" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=o_s" title="Distributor Payments"><div>Distributor Payments</div></a></div><div id="o_y" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=o_y" title="Shipping Line Payment"><div>Shipping Line Payment</div></a></div></div><div id="z" class="SMParent"><a href="" title=""></a>Stock and Investments</div><div id="__z" class="SMChildrenBox" style="overflow: auto; height: 73px; display: none;"><div id="z_c" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=z_c" title="Enrolment of new customer on InvestmentOne Stock Trading Platform"><div>Investment-One Stocktrading (Enrolment)</div></a></div><div id="z_d" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=z_d" title="For existing customers: Buy/Sell stocks on InvestmentOne Stock Trading Platform"><div>Investment-One Stocktrading (Stock Purchase)</div></a></div></div><div id="4" class="SMParent"><a href="" title=""></a>Sachet Banking&nbsp;<span class="badge">new</span></div><div id="__4" class="SMChildrenBox" style="overflow: auto; height: 27px; display: none;"><div id="4_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=4_a" title="Sachet Subbscription"><div>Sachet Subscription&nbsp;<span class="badge">new</span></div></a></div></div><div id="7" class="SMParent"><a href="" title=""></a>Insurance &amp; HMO</div><div id="__7" class="SMChildrenBox" style="overflow: auto; height: 24px; display: none;"><div id="7_a" class="SMChild"><a href="https://ibank.gtbank.com/ibank3/main.aspx?sm=7_a" title="Insurance &amp; HMO"><div>Insurance &amp; HMO</div></a></div></div></div>
+
+<!--   obout inc SlideMenu version 3.3.1.5  http://www.obout.com   -->
+
+
+    <a href="https://ibank.gtbank.com/ibank3/~/bin/obout_SlideMenu3_Pro_NET.dll"></a>
+    <div id="Navbar1_txtFeed" class="SMParent addMenu">
+    <a id="Navbar1_lkFeedback" title="Give us your feedback or make a request on this platform" href="javascript:__doPostBack('Navbar1$lkFeedback','')">
+    Customer Feedback</a></div>
+    <div id="Navbar1_txtLog" class="SMParent addMenu">
+    <a id="Navbar1_lbtnLogOff" title="Sign out of your Internet banking profile" href="javascript:__doPostBack('Navbar1$lbtnLogOff','')">
+    Log Off</a></div>
+</div>
+<div id="Navbar1_keywd" class="nodisplay" style="color: rgb(255, 255, 255); display: none;"></div>
+
+<div id="pop-up">
+            <div id="pop_title">Transaction Story</div>
+            <p id="pop_body">
+              This is a link
+            </p>
+        </div>
+<style>
+    
+    #pop_title {
+        font-size: 15px !important;
+        font-weight: bold;
+        color: #dd4f05 !important;
+    }
+    div#pop-up {
+        display: none;
+        position: absolute;
+        width: 280px;
+        padding: 10px;
+        background: #eeeeee;
+        color: #444444;
+        border: 1px solid #1a1a1a;
+        font-size: 90%;
+        z-index: 5000;
+    }
+
+    .searchInput {
+        width: 190px !important;
+        margin: 0px;
+        height: 30px !important;
+        border-radius: 5px;
+        margin-bottom: 2px;
+        border: 1px solid #cccccc;
+        font-size: 11px !important;
+        font-family: Arial !important;
+        line-height: 30px !important;
+        padding: 3px;
+    }
+
+    .searchInputButton {
+          
+        height: 30px !important;
+        border-radius: 5px;
+        margin-left: 2px;
+        border: 1px solid #cccccc;
+        font-size: 12px !important;
+        font-family: Arial !important;
+        line-height: 30px !important;
+         
+    }
+
+    .badge {
+        display: inline-block;
+        min-width: 10px;
+        padding: 3px 7px;
+        font-size: 9px !important;
+        font-weight: lighter !important;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        background-color: #dd4f05 !important;
+        border-radius: 10px;
+    }
+</style>
+<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            link.onmouseover = function () {
+                this.setAttribute("org_title", this.title);
+                this.title = "";
+            };
+            link.onmouseout = function () {
+                this.title = this.getAttribute("org_title");
+            };
+        }
+    };
+    
+    
+    $(function () {
+        var moveLeft = 20;
+        var moveDown = 10;
+
+        $('a').hover(function (e) {
+            try{
+                if ($(this).html().contains('img'))
+                {
+                    return;
+                }
+            }catch(e){}
+            
+            $('div#pop-up').show();
+            var da = '';
+            try
+            {
+                da = $($(this).html()).html();
+            }
+            catch(e)
+            {
+                da = $(this).html();
+            }
+            
+            var txt = "";
+            if (da == undefined) {
+                if($(this).hasClass("login-window")) {
+                    txt = "Transaction Story";
+                } else {
+                    txt = "Info About Link";
+                }
+            } else {
+                txt = da;
+            }
+            $('#pop_title').html('<i class="fa fa-info-circle"></i>&nbsp;'+txt);
+            $('#pop_body').html($(this).attr('title'));
+            //.css('top', e.pageY + moveDown)
+            //.css('left', e.pageX + moveLeft)
+            //.appendTo('body');
+        }, function () {
+            $('div#pop-up').hide();
+        });
+
+        $('a').mousemove(function (e) {
+            $("div#pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+
+    });
+</script>
+
+ <script>
+     $(document).ready(function() {
+         $('.nodisplay').hide();
+     });
+     $(function () {
+      
+
+         var availableTags = $('.nodisplay').html().split(',');
+             $(".searchInput").autocomplete({
+                 source: availableTags
+             });
+     });
+ </script>
+
+<style>
+    
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden {
+	display: none;
+}
+.ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.ui-helper-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+	clear: both;
+}
+.ui-helper-clearfix {
+	min-height: 0; /* support: IE7 */
+}
+.ui-helper-zfix {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	filter:Alpha(Opacity=0); /* support: IE8 */
+}
+
+.ui-front {
+	z-index: 100;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+	cursor: default !important;
+}
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.ui-accordion .ui-accordion-header {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	margin: 2px 0 0 0;
+	padding: .5em .5em .5em .7em;
+	min-height: 0; /* support: IE7 */
+	font-size: 100%;
+}
+.ui-accordion .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-icons .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-accordion .ui-accordion-content {
+	padding: 1em 2.2em;
+	border-top: 0;
+	overflow: auto;
+}
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+}
+.ui-button {
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	line-height: normal;
+	margin-right: .1em;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	overflow: visible; /* removes extra width in IE */
+}
+.ui-button,
+.ui-button:link,
+.ui-button:visited,
+.ui-button:hover,
+.ui-button:active {
+	text-decoration: none;
+}
+/* to make room for the icon, a width needs to be set here */
+.ui-button-icon-only {
+	width: 2.2em;
+}
+/* button elements seem to need a little more width */
+button.ui-button-icon-only {
+	width: 2.4em;
+}
+.ui-button-icons-only {
+	width: 3.4em;
+}
+button.ui-button-icons-only {
+	width: 3.7em;
+}
+
+/* button text element */
+.ui-button .ui-button-text {
+	display: block;
+	line-height: normal;
+}
+.ui-button-text-only .ui-button-text {
+	padding: .4em 1em;
+}
+.ui-button-icon-only .ui-button-text,
+.ui-button-icons-only .ui-button-text {
+	padding: .4em;
+	text-indent: -9999999px;
+}
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 1em .4em 2.1em;
+}
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 2.1em .4em 1em;
+}
+.ui-button-text-icons .ui-button-text {
+	padding-left: 2.1em;
+	padding-right: 2.1em;
+}
+/* no icon support for input elements, provide padding by default */
+input.ui-button {
+	padding: .4em 1em;
+}
+
+/* button icon element(s) */
+.ui-button-icon-only .ui-icon,
+.ui-button-text-icon-primary .ui-icon,
+.ui-button-text-icon-secondary .ui-icon,
+.ui-button-text-icons .ui-icon,
+.ui-button-icons-only .ui-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-button-icon-only .ui-icon {
+	left: 50%;
+	margin-left: -8px;
+}
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+	left: .5em;
+}
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+	right: .5em;
+}
+
+/* button sets */
+.ui-buttonset {
+	margin-right: 7px;
+}
+.ui-buttonset .ui-button {
+	margin-left: 0;
+	margin-right: -.3em;
+}
+
+/* workarounds */
+/* reset extra padding in Firefox, see h5bp.com/l */
+input.ui-button::-moz-focus-inner,
+button.ui-button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 2px;
+	width: 1.8em;
+	height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 45%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	text-align: right;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+	right: 2px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+	left: 2px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+	right: 1px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+	left: 1px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+.ui-dialog {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: .2em;
+	outline: 0;
+}
+.ui-dialog .ui-dialog-titlebar {
+	padding: .4em 1em;
+	position: relative;
+}
+.ui-dialog .ui-dialog-title {
+	float: left;
+	margin: .1em 0;
+	white-space: nowrap;
+	width: 90%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	position: absolute;
+	right: .3em;
+	top: 50%;
+	width: 20px;
+	margin: -10px 0 0 0;
+	padding: 1px;
+	height: 20px;
+}
+.ui-dialog .ui-dialog-content {
+	position: relative;
+	border: 0;
+	padding: .5em 1em;
+	background: none;
+	overflow: auto;
+}
+.ui-dialog .ui-dialog-buttonpane {
+	text-align: left;
+	border-width: 1px 0 0 0;
+	background-image: none;
+	margin-top: .5em;
+	padding: .3em 1em .5em .4em;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+	float: right;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+	margin: .5em .4em .5em 0;
+	cursor: pointer;
+}
+.ui-dialog .ui-resizable-se {
+	width: 12px;
+	height: 12px;
+	right: -5px;
+	bottom: -5px;
+	background-position: 16px 16px;
+}
+.ui-draggable .ui-dialog-titlebar {
+	cursor: move;
+}
+.ui-draggable-handle {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	outline: none;
+}
+.ui-menu .ui-menu {
+	position: absolute;
+}
+.ui-menu .ui-menu-item {
+	position: relative;
+	margin: 0;
+	padding: 3px 1em 3px .4em;
+	cursor: pointer;
+	min-height: 0; /* support: IE7 */
+	/* support: IE10, see #8844 */
+	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+.ui-menu .ui-menu-divider {
+	margin: 5px 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-width: 1px 0 0 0;
+}
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+	margin: -1px;
+}
+
+/* icon support */
+.ui-menu-icons {
+	position: relative;
+}
+.ui-menu-icons .ui-menu-item {
+	padding-left: 2em;
+}
+
+/* left-aligned */
+.ui-menu .ui-icon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: .2em;
+	margin: auto 0;
+}
+
+/* right-aligned */
+.ui-menu .ui-menu-icon {
+	left: auto;
+	right: 0;
+}
+.ui-progressbar {
+	height: 2em;
+	text-align: left;
+	overflow: hidden;
+}
+.ui-progressbar .ui-progressbar-value {
+	margin: -1px;
+	height: 100%;
+}
+.ui-progressbar .ui-progressbar-overlay {
+	background: url("data:image/gif;base64,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");
+	height: 100%;
+	filter: alpha(opacity=25); /* support: IE8 */
+	opacity: 0.25;
+}
+.ui-progressbar-indeterminate .ui-progressbar-value {
+	background-image: none;
+}
+.ui-resizable {
+	position: relative;
+}
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
+}
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
+	left: 0;
+}
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-se {
+	cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;
+}
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
+}
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
+}
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
+	top: -5px;
+}
+.ui-selectable {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-selectable-helper {
+	position: absolute;
+	z-index: 100;
+	border: 1px dotted black;
+}
+.ui-selectmenu-menu {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.ui-selectmenu-menu .ui-menu {
+	overflow: auto;
+	/* Support: IE7 */
+	overflow-x: hidden;
+	padding-bottom: 1px;
+}
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.5;
+	padding: 2px 0.4em;
+	margin: 0.5em 0 0 0;
+	height: auto;
+	border: 0;
+}
+.ui-selectmenu-open {
+	display: block;
+}
+.ui-selectmenu-button {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+}
+.ui-selectmenu-button span.ui-icon {
+	right: 0.5em;
+	left: auto;
+	margin-top: -8px;
+	position: absolute;
+	top: 50%;
+}
+.ui-selectmenu-button span.ui-selectmenu-text {
+	text-align: left;
+	padding: 0.4em 2.1em 0.4em 1em;
+	display: block;
+	line-height: 1.4;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: default;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/* support: IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+.ui-slider-horizontal {
+	height: .8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+.ui-slider-vertical {
+	width: .8em;
+	height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0;
+}
+.ui-sortable-handle {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-spinner {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	padding: 0;
+	vertical-align: middle;
+}
+.ui-spinner-input {
+	border: none;
+	background: none;
+	color: inherit;
+	padding: 0;
+	margin: .2em 0;
+	vertical-align: middle;
+	margin-left: .4em;
+	margin-right: 22px;
+}
+.ui-spinner-button {
+	width: 16px;
+	height: 50%;
+	font-size: .5em;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	position: absolute;
+	cursor: default;
+	display: block;
+	overflow: hidden;
+	right: 0;
+}
+/* more specificity required here to override default borders */
+.ui-spinner a.ui-spinner-button {
+	border-top: none;
+	border-bottom: none;
+	border-right: none;
+}
+/* vertically center icon */
+.ui-spinner .ui-icon {
+	position: absolute;
+	margin-top: -8px;
+	top: 50%;
+	left: 0;
+}
+.ui-spinner-up {
+	top: 0;
+}
+.ui-spinner-down {
+	bottom: 0;
+}
+
+/* TR overrides */
+.ui-spinner .ui-icon-triangle-1-s {
+	/* need to fix icons sprite */
+	background-position: -65px -16px;
+}
+.ui-tabs {
+	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	padding: .2em;
+}
+.ui-tabs .ui-tabs-nav {
+	margin: 0;
+	padding: .2em .2em 0;
+}
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	margin: 1px .2em 0 0;
+	border-bottom-width: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	float: left;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	margin-bottom: -1px;
+	padding-bottom: 1px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+	cursor: text;
+}
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+	cursor: pointer;
+}
+.ui-tabs .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+	padding: 1em 1.4em;
+	background: none;
+}
+.ui-tooltip {
+	padding: 8px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+}
+body .ui-tooltip {
+	border-width: 2px;
+}
+
+/* Component containers
+----------------------------------*/
+.ui-widget {
+	font-family: Arial,sans-serif;
+	font-size: 1.0em;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 1em;
+}
+.ui-widget-content {
+	border: 1px solid #aaaaaa;
+	background: #ffffff url("images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
+	color: #222222;
+}
+.ui-widget-content a {
+	color: #222222;
+}
+.ui-widget-header {
+	border: 1px solid #aaaaaa;
+	background: #cccccc url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+	color: #222222;
+	font-weight: bold;
+}
+.ui-widget-header a {
+	color: #222222;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	border: 1px solid #d3d3d3;
+	background: #e6e6e6 url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #555555;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+	color: #555555;
+	text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	border: 1px solid #999999;
+	background: #dadada url("images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #212121;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited {
+	color: #212121;
+	text-decoration: none;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+	border: 1px solid #aaaaaa;
+	background: #ffffff url("images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #212121;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+	color: #212121;
+	text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	border: 1px solid #fcefa1;
+	background: #fbf9ee url("images/ui-bg_glass_55_fbf9ee_1x400.png") 50% 50% repeat-x;
+	color: #363636;
+}
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+	color: #363636;
+}
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+	border: 1px solid #cd0a0a;
+	background: #fef1ec url("images/ui-bg_glass_95_fef1ec_1x400.png") 50% 50% repeat-x;
+	color: #cd0a0a;
+}
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+	color: #cd0a0a;
+}
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+	color: #cd0a0a;
+}
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+	font-weight: bold;
+}
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+	opacity: .7;
+	filter:Alpha(Opacity=70); /* support: IE8 */
+	font-weight: normal;
+}
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+	opacity: .35;
+	filter:Alpha(Opacity=35); /* support: IE8 */
+	background-image: none;
+}
+.ui-state-disabled .ui-icon {
+	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
+}
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+	width: 16px;
+	height: 16px;
+}
+.ui-icon,
+.ui-widget-content .ui-icon {
+	background-image: url("images/ui-icons_222222_256x240.png");
+}
+.ui-widget-header .ui-icon {
+	background-image: url("images/ui-icons_222222_256x240.png");
+}
+.ui-state-default .ui-icon {
+	background-image: url("images/ui-icons_888888_256x240.png");
+}
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon {
+	background-image: url("images/ui-icons_454545_256x240.png");
+}
+.ui-state-active .ui-icon {
+	background-image: url("images/ui-icons_454545_256x240.png");
+}
+.ui-state-highlight .ui-icon {
+	background-image: url("images/ui-icons_2e83ff_256x240.png");
+}
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon {
+	background-image: url("images/ui-icons_cd0a0a_256x240.png");
+}
+
+/* positioning */
+.ui-icon-blank { background-position: 16px 16px; }
+.ui-icon-carat-1-n { background-position: 0 0; }
+.ui-icon-carat-1-ne { background-position: -16px 0; }
+.ui-icon-carat-1-e { background-position: -32px 0; }
+.ui-icon-carat-1-se { background-position: -48px 0; }
+.ui-icon-carat-1-s { background-position: -64px 0; }
+.ui-icon-carat-1-sw { background-position: -80px 0; }
+.ui-icon-carat-1-w { background-position: -96px 0; }
+.ui-icon-carat-1-nw { background-position: -112px 0; }
+.ui-icon-carat-2-n-s { background-position: -128px 0; }
+.ui-icon-carat-2-e-w { background-position: -144px 0; }
+.ui-icon-triangle-1-n { background-position: 0 -16px; }
+.ui-icon-triangle-1-ne { background-position: -16px -16px; }
+.ui-icon-triangle-1-e { background-position: -32px -16px; }
+.ui-icon-triangle-1-se { background-position: -48px -16px; }
+.ui-icon-triangle-1-s { background-position: -64px -16px; }
+.ui-icon-triangle-1-sw { background-position: -80px -16px; }
+.ui-icon-triangle-1-w { background-position: -96px -16px; }
+.ui-icon-triangle-1-nw { background-position: -112px -16px; }
+.ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+.ui-icon-arrow-1-n { background-position: 0 -32px; }
+.ui-icon-arrow-1-ne { background-position: -16px -32px; }
+.ui-icon-arrow-1-e { background-position: -32px -32px; }
+.ui-icon-arrow-1-se { background-position: -48px -32px; }
+.ui-icon-arrow-1-s { background-position: -64px -32px; }
+.ui-icon-arrow-1-sw { background-position: -80px -32px; }
+.ui-icon-arrow-1-w { background-position: -96px -32px; }
+.ui-icon-arrow-1-nw { background-position: -112px -32px; }
+.ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.ui-icon-arrowthick-1-n { background-position: 0 -48px; }
+.ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.ui-icon-arrow-4 { background-position: 0 -80px; }
+.ui-icon-arrow-4-diag { background-position: -16px -80px; }
+.ui-icon-extlink { background-position: -32px -80px; }
+.ui-icon-newwin { background-position: -48px -80px; }
+.ui-icon-refresh { background-position: -64px -80px; }
+.ui-icon-shuffle { background-position: -80px -80px; }
+.ui-icon-transfer-e-w { background-position: -96px -80px; }
+.ui-icon-transferthick-e-w { background-position: -112px -80px; }
+.ui-icon-folder-collapsed { background-position: 0 -96px; }
+.ui-icon-folder-open { background-position: -16px -96px; }
+.ui-icon-document { background-position: -32px -96px; }
+.ui-icon-document-b { background-position: -48px -96px; }
+.ui-icon-note { background-position: -64px -96px; }
+.ui-icon-mail-closed { background-position: -80px -96px; }
+.ui-icon-mail-open { background-position: -96px -96px; }
+.ui-icon-suitcase { background-position: -112px -96px; }
+.ui-icon-comment { background-position: -128px -96px; }
+.ui-icon-person { background-position: -144px -96px; }
+.ui-icon-print { background-position: -160px -96px; }
+.ui-icon-trash { background-position: -176px -96px; }
+.ui-icon-locked { background-position: -192px -96px; }
+.ui-icon-unlocked { background-position: -208px -96px; }
+.ui-icon-bookmark { background-position: -224px -96px; }
+.ui-icon-tag { background-position: -240px -96px; }
+.ui-icon-home { background-position: 0 -112px; }
+.ui-icon-flag { background-position: -16px -112px; }
+.ui-icon-calendar { background-position: -32px -112px; }
+.ui-icon-cart { background-position: -48px -112px; }
+.ui-icon-pencil { background-position: -64px -112px; }
+.ui-icon-clock { background-position: -80px -112px; }
+.ui-icon-disk { background-position: -96px -112px; }
+.ui-icon-calculator { background-position: -112px -112px; }
+.ui-icon-zoomin { background-position: -128px -112px; }
+.ui-icon-zoomout { background-position: -144px -112px; }
+.ui-icon-search { background-position: -160px -112px; }
+.ui-icon-wrench { background-position: -176px -112px; }
+.ui-icon-gear { background-position: -192px -112px; }
+.ui-icon-heart { background-position: -208px -112px; }
+.ui-icon-star { background-position: -224px -112px; }
+.ui-icon-link { background-position: -240px -112px; }
+.ui-icon-cancel { background-position: 0 -128px; }
+.ui-icon-plus { background-position: -16px -128px; }
+.ui-icon-plusthick { background-position: -32px -128px; }
+.ui-icon-minus { background-position: -48px -128px; }
+.ui-icon-minusthick { background-position: -64px -128px; }
+.ui-icon-close { background-position: -80px -128px; }
+.ui-icon-closethick { background-position: -96px -128px; }
+.ui-icon-key { background-position: -112px -128px; }
+.ui-icon-lightbulb { background-position: -128px -128px; }
+.ui-icon-scissors { background-position: -144px -128px; }
+.ui-icon-clipboard { background-position: -160px -128px; }
+.ui-icon-copy { background-position: -176px -128px; }
+.ui-icon-contact { background-position: -192px -128px; }
+.ui-icon-image { background-position: -208px -128px; }
+.ui-icon-video { background-position: -224px -128px; }
+.ui-icon-script { background-position: -240px -128px; }
+.ui-icon-alert { background-position: 0 -144px; }
+.ui-icon-info { background-position: -16px -144px; }
+.ui-icon-notice { background-position: -32px -144px; }
+.ui-icon-help { background-position: -48px -144px; }
+.ui-icon-check { background-position: -64px -144px; }
+.ui-icon-bullet { background-position: -80px -144px; }
+.ui-icon-radio-on { background-position: -96px -144px; }
+.ui-icon-radio-off { background-position: -112px -144px; }
+.ui-icon-pin-w { background-position: -128px -144px; }
+.ui-icon-pin-s { background-position: -144px -144px; }
+.ui-icon-play { background-position: 0 -160px; }
+.ui-icon-pause { background-position: -16px -160px; }
+.ui-icon-seek-next { background-position: -32px -160px; }
+.ui-icon-seek-prev { background-position: -48px -160px; }
+.ui-icon-seek-end { background-position: -64px -160px; }
+.ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.ui-icon-seek-first { background-position: -80px -160px; }
+.ui-icon-stop { background-position: -96px -160px; }
+.ui-icon-eject { background-position: -112px -160px; }
+.ui-icon-volume-off { background-position: -128px -160px; }
+.ui-icon-volume-on { background-position: -144px -160px; }
+.ui-icon-power { background-position: 0 -176px; }
+.ui-icon-signal-diag { background-position: -16px -176px; }
+.ui-icon-signal { background-position: -32px -176px; }
+.ui-icon-battery-0 { background-position: -48px -176px; }
+.ui-icon-battery-1 { background-position: -64px -176px; }
+.ui-icon-battery-2 { background-position: -80px -176px; }
+.ui-icon-battery-3 { background-position: -96px -176px; }
+.ui-icon-circle-plus { background-position: 0 -192px; }
+.ui-icon-circle-minus { background-position: -16px -192px; }
+.ui-icon-circle-close { background-position: -32px -192px; }
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.ui-icon-circle-arrow-e { background-position: -112px -192px; }
+.ui-icon-circle-arrow-s { background-position: -128px -192px; }
+.ui-icon-circle-arrow-w { background-position: -144px -192px; }
+.ui-icon-circle-arrow-n { background-position: -160px -192px; }
+.ui-icon-circle-zoomin { background-position: -176px -192px; }
+.ui-icon-circle-zoomout { background-position: -192px -192px; }
+.ui-icon-circle-check { background-position: -208px -192px; }
+.ui-icon-circlesmall-plus { background-position: 0 -208px; }
+.ui-icon-circlesmall-minus { background-position: -16px -208px; }
+.ui-icon-circlesmall-close { background-position: -32px -208px; }
+.ui-icon-squaresmall-plus { background-position: -48px -208px; }
+.ui-icon-squaresmall-minus { background-position: -64px -208px; }
+.ui-icon-squaresmall-close { background-position: -80px -208px; }
+.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-top-left-radius: 4px;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+	border-top-right-radius: 4px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+	border-bottom-left-radius: 4px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-bottom-right-radius: 4px;
+}
+
+/* Overlays */
+.ui-widget-overlay {
+	background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+	opacity: .3;
+	filter: Alpha(Opacity=30); /* support: IE8 */
+}
+.ui-widget-shadow {
+	margin: -8px 0 0 -8px;
+	padding: 8px;
+	background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+	opacity: .3;
+	filter: Alpha(Opacity=30); /* support: IE8 */
+	border-radius: 8px;
+}
+</style>
+                    <div class="sidebarform">
+                    </div>
+                </div>
+                <div class="mainContent">
+                    <div class="greeting">
+                        <h2 class="darkerGray">
+                            <span id="lblUserName">Welcome, Olawale</span></h2>
+                        <p>
+                            <span class="orange"><strong>Your last login: </strong></span>
+                            <span id="lblLastLogin"></span>
+                        </p>
+                        <p>
+                            <span class="orange"><strong>BVN: </strong></span>
+                            <span id="lblBVN" style="font-size:Medium;font-weight:bold;">22203477535</span>
+                        </p>
+						
+						<p>
+                            <span class="orange"><strong>Token Serial Number: </strong></span>
+                            <span id="LabelToken" style="font-size:Medium;font-weight:bold;">2892718933</span>
+                        </p>
+
+                        <!-- NIN addition-->
+                        <p>
+                            <span class="orange"><strong>NIN: </strong></span>
+                            <span id="LblNIN" style="font-size:Medium;font-weight:bold;"></span>
+                        </p>
+
+                    </div>
+                    <div id="AccountStatusPane">
+
+<link href="wall_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<script>
+    function SetCheckBox2() {
+        var decider = document.getElementById("_ctl0_CheckBox1");
+        if (document.getElementById("_ctl0_CheckBox1").checked = true) {
+            document.getElementById("_ctl0_CheckBox1").checked = false;
+            //$("#_ctl0_CheckBox1").prop("checked", true);
+        }
+        else // (document.getElementById("_ctl0_CheckBox1").checked = false) 
+        {
+            document.getElementById("_ctl0_CheckBox1").checked = true;
+           // $("#_ctl0_CheckBox1").prop("checked", true);
+        }
+      //  submitInformation();
+        //$("#_ctl0_CheckBox1").attr("checked", value);
+        //$("#_ctl0_CheckBox1").prop("checked", value);
+        //$("#_ctl0_CheckBox1").prop("checked", value);
+        //document.getElementById("_ctl0_CheckBox1").checked = value;
+    }
+    function SetCheckBox(value) {
+        $("#_ctl0_CheckBox1").attr("checked", value);
+        $("#_ctl0_CheckBox1").prop("checked", value);
+        $("#_ctl0_CheckBox1").prop("checked", value);
+        document.getElementById("_ctl0_CheckBox1").checked = value;
+    }
+   
+    function submitInformation() {
+        document.getElementById("_ctl0_Button2").click();
+    }
+    $('#CheckBox1').on('change', function () {
+        if ($('#CheckBox1').prop('checked'))
+            $('#div').css('background', 'orange');
+        else
+            $('#div').css('background', 'grey');
+    });
+</script>
+<div class="crosssell">
+    <h3>Did you know?</h3>
+    <p style="display: block;">
+        <span id="_ctl0_crossSellText">When collecting a new/replacement
+ Card, you can avoid the queues in banking halls by viewing your current
+ PIN or generating a new PIN on Internet Banking using the PIN retrieval
+ function under Cards.</span>
+        
+    </p>
+
+</div>
+ 
+
+
+<input type="hidden" id="hdDate">
+<input type="hidden" id="dhEmail">
+
+
+
+<div id="_ctl0_AccountPane">
+    <h3>Account Status</h3>
+    <div id="_ctl0_divActSwt" class="switchbar">
+                    <ul class="tg-list">                      
+                        <li id="_ctl0_lSwitch" class="tg-list-item">                            
+                        </li>
+                    </ul>
+                    
+            </div>
+    <span style="float:right" class="orange"><strong>Hide Balance</strong></span>
+     <label class="switch">  
+            <input id="_ctl0_CheckBox1" type="checkbox" name="_ctl0:CheckBox1" onclick="javascript:setTimeout('__doPostBack(\'_ctl0$CheckBox1\',\'\')', 0)" language="javascript">        
+            <span class="slider round"></span>
+        </label>
+     
+        <input type="submit" name="_ctl0:Button2" value="Button" id="_ctl0_Button2" style="display:none">
+    <div class="tableContainer">
+        <table class="responsive dispTable" cellspacing="0" rules="all" border="1" id="_ctl0_ItemsGrid" style="height:128px;width:100%;border-collapse:collapse;">
+	<tbody><tr align="center" valign="middle" style="color:White;background-color:Gray;font-weight:bold;font-style:normal;text-decoration:none;">
+		<td align="center" valign="middle" style="font-weight:bold;font-style:normal;text-decoration:none;">Account Number</td><td>Account Name</td><td align="center" style="font-weight:bold;font-style:normal;text-decoration:none;">Account Type</td><td align="center">Currency </td><td>Account Status</td><td>Book Balance</td><td> Balance</td>
+	</tr><tr align="center" style="font-weight:normal;font-style:normal;text-decoration:none;">
+		<td align="center" style="font-style:normal;text-decoration:none;"><a href="javascript:__doPostBack('_ctl0$ItemsGrid$_ctl2$_ctl0','')">0168025324</a></td><td align="center" style="font-weight:normal;font-style:normal;text-decoration:none;">ADESHINA OLAWALE GANIYU</td><td align="center" style="font-weight:normal;font-style:normal;text-decoration:none;">SAVINGS ACCOUNT</td><td align="center">Naira</td><td align="center" style="font-weight:normal;font-style:normal;text-decoration:none;">Active/No restriction</td><td align="right">65.69</td><td align="right">            58.71</td>
+	</tr><tr align="center" style="background-color:#EBEBEB;font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;">
+		<td align="center" style="font-style:normal;text-decoration:none;"><a href="javascript:__doPostBack('_ctl0$ItemsGrid$_ctl3$_ctl0','')"></a></td><td align="center" style="font-weight:normal;font-style:normal;text-decoration:none;">&nbsp;</td><td align="center" style="font-weight:normal;font-style:normal;text-decoration:none;">&nbsp;</td><td align="center">&nbsp;</td><td align="center" style="font-weight:normal;font-style:normal;text-decoration:none;">&nbsp;</td><td align="right">&nbsp;</td><td align="right">58.71</td>
+	</tr><tr align="center" style="font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;">
+		<td align="center" style="font-style:normal;text-decoration:none;"><a href="javascript:__doPostBack('_ctl0$ItemsGrid$_ctl4$_ctl0','')"></a></td><td align="center" style="font-weight:normal;font-style:normal;text-decoration:none;">&nbsp;</td><td align="center" style="font-weight:normal;font-style:normal;text-decoration:none;">&nbsp;</td><td align="center">&nbsp;</td><td align="center" style="font-weight:normal;font-style:normal;text-decoration:none;">&nbsp;</td><td align="right">&nbsp;</td><td align="right">&nbsp;</td>
+	</tr>
+</tbody></table>
+    </div>
+    <p>* Click on the <strong>Account Number</strong> to see details for an account.</p>
+    
+     
+</div>
+
+
+
+
+
+
+<div class="modal fade show-bg" tabindex="-1" role="dialog" id="mySmsModal">
+    <div class="modal-dialog">
+        <div class="modal-content pop modal-content-extension " style="margin-top: 20% !important">
+            <div class="modal-header pop_header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <p class="modal-title" id="popSmsHeader">SEND BIRTHDAY WISHES</p>
+            </div>
+            <div class="modal-body">
+                <p class="popMessage"></p>
+
+                <div class="form-horizontal popMessage">
+                    <label for="txtSmsCustomerName" class="col-sm-3 control-label text_notification_card_pick_up">Customer Name</label>
+                    <div class="formInput">
+                        <input type="text" class="form-control" id="txtSmsCustomerName" disabled="disabled">
+                    </div>
+                    <div class="clear"></div>
+
+                    <label for="txtSmsAccount" class="col-sm-3 control-label text_notification_card_pick_up">Account</label>
+                    <div class="formInput">
+                        <input type="text" class="form-control" id="txtSmsAccount" disabled="disabled">
+                    </div>
+                    <div>&nbsp;</div>
+                    <label for="txtSenderShortName" class="col-sm-3 control-label text_notification_card_pick_up">Sender Short Name</label>
+                    <div class="formInput">
+                        <input type="text" class="form-control" id="txtSenderShortName" maxlength="11" style="float: left">
+                        <input type="checkbox" id="copyme" name="copyme" value="sendcopy" style="width: 25px; height: 15px;"><span style="font-size: 12px">Send me a copy</span>
+                    </div>
+                    <div>&nbsp;</div>
+
+                    <label for="txtSmsWishes" class="col-sm-3 control-label text_notification_card_pick_up">BirthDay Wishes</label>
+                    <div class="formInput">
+                        <textarea id="txtSmsWishes" maxlength="765" class="form-control" rows="10" style="width: 350px; height: 150px;"></textarea>
+                    </div>
+                    <span style="font-size: xx-small; margin-left: 172px;">
+                        <label id="CharacterEntered">0</label>
+                        characters entered. |
+                        <label id="CharacterRemaining">765</label>
+                        characters remaining. </span>
+                    <span style="font-size: xx-small; margin-left: 100px">Page
+                        <label id="pageCount">0</label></span>
+                </div>
+                  <p style="font-size:x-small; font-family:'Browallia New', 'Arial';font-weight:bold; margin-top: 50px !important;">Please note that you will be charged for this Sms</p>
+            </div>
+            <div class="modal-footer" style="margin-top: 5px;">
+                
+              
+                <button type="button" class="btn popover_button_yes" id="SendSmsNow">SEND SMS</button>
+                <button type="button" class="btn  popover_button_skip" data-dismiss="modal" id="Button1">CANCEL</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+<div class="modal fade show-bg " tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content pop modal-content-extension">
+            <div class="modal-header pop_header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <p class="modal-title" id="popTitle"></p>
+            </div>
+            <div class="modal-body">
+                <p id="popMessage"></p>
+            </div>
+            <div class="modal-footer">
+                
+                <button type="button" class="btn popover_button_yes" id="popOkay"></button>
+                <button type="button" class="btn  popover_button_skip" data-dismiss="modal" id="popDismiss"></button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+
+
+<script src="wall_files/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    if ($(window).width() < 750) {
+        $('#_ctl0_ItemsGrid tr *:nth-child(2)').css('display', 'none');
+        $('#_ctl0_ItemsGrid tr *:nth-child(3)').css('display', 'none');
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('.crosssell p').slideToggle(1200, "easeOutBounce");;
+        }, 1000);
+    });
+
+    function hider(a) {
+        var id = '#' + a;
+        $(id).hide();
+    }
+
+</script>
+</div>
+                    <div class="clear"></div>
+                    <div class="bottomads">
+                        <div class="roundBox adbox">
+                            <h3 class="darkGray apps">GT App Store</h3>
+                            <p>
+                                Join our simple world of
+                                <br>
+                                banking without limits by clicking on the links below to download our applications.
+                            </p>
+                            <a href="http://www.gtbank.com/personal-banking/ways-to-bank" target="_blank" class="grayButton">CLICK TO VISIT</a>
+                        </div>
+                        <div class="roundBox adbox">
+                            <h3 class="darkGray shield">Security Tips</h3>
+                            <p>
+                                Please note that GTBank
+                                <br>
+                                will NEVER ask you to provide your PIN (Personal Identification Numbers).
+                            </p>
+                            <a href="http://www.gtbank.com/securitycentre" target="_blank" class="grayButton">READ MORE</a>
+                        </div>
+                        <div class="roundBox adbox lastbox">
+                            <h3 class="darkGray">Do you have a token?</h3>
+                            <p class="token">Get a Token today and begin to carry out third party transfers and online payments.</p>
+                            <a href="http://www.gtbank.com/security-token" target="_blank" class="grayButton">GET YOURS</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="sidebarRight" class="desktop">
+                    
+                   
+                    <div class="modal-dialog reduce_width_byforce">
+                        <div class="modal-content" style="width: 275px !important;">
+                            <div class="modal-header pop_header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                <p class="modal-title" id="popTitle">NOVEMBER 2023 </p>
+                            </div>
+                            <div class="modal-body">
+                                <div class="calender">
+                                    <div class="loaderImage" style="margin-left: 100px; margin-top: 100px; display: none;">
+                                        <img src="wall_files/ajax-loader.gif" title="loading...">
+                                    </div>
+                                    <div id="cal"><table class="table table-striped" style="width:80% !important;font-size:10px !important;margin-top:-15px !important;margin-left:0px !important;"><tbody><tr style="color:#cccccc !important;"><td>MON</td><td>TUE</td><td>WED</td><td>THU</td><td>FRI</td><td>SAT</td><td>SUN</td></tr><tr><td style="color:#cccccc !important;">30</td><td style="color:#cccccc !important;">31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr><tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr><tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr><tr><td>27</td><td>28</td><td>29</td><td>30</td><td style="color:#cccccc !important;">1</td><td style="color:#cccccc !important;">2</td><td style="color:#cccccc !important;">3</td></tr></tbody></table></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    
+                    <div class="roundBox longad">
+                        <div>
+                            <a id="AdRotator3" href="http://www.gtbank.com/personalbanking/cards?view=featured" target="_blank"><img src="wall_files/cashback.png" alt="Cash Back" border="0"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mobNavHide" class="clear"></div>
+            </div>
+            <div class="footer">
+                <p class="white">
+                    <span class="tablet desktop netbook"><a href="http://www.gtbank.com/" target="_blank" class="white">GTBANK.COM</a>
+                        | </span> <a href="https://www.gtbank.com/privacy-policy" target="_blank" class="white">PRIVACY POLICY</a> | <a href="https://www.gtbank.com/terms-and-conditions" target="_blank" class="white">TERMS &amp; CONDITIONS</a>
+                    | <a href="https://www.gtbank.com/help-centre/whistle-blower" target="_blank" class="white">WHISTLE BLOWER</a>
+                </p>
+            </div>
+            <p class="smartphone" style="text-align: right; margin: 0 10px; width: 280px;"><a href="http://www.gtbank.com/" target="_blank">WWW.GTBANK.COM</a></p>
+            <div class="clear">&nbsp;</div>
+
+        </div>
+
+        <div class="modal fade show-bg" tabindex="-1" role="dialog" id="habMarketPrompt">
+            <div class="modal-dialog">
+                <div class="modal-content pop modal-content-extension">
+                    <div class="modal-header pop_header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <p class="modal-title" id="popTitleS">REDIRECT NOTIFICATION</p>
+                    </div>
+                    <div class="modal-body">
+                        <p id="popMessage">
+                            You will be redirected to a site outside internet Banking. Kindly Click Ok to Continue
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        
+                        <button type="button" class="btn popover_button_yes" id="popOkayRedirect">OK</button>
+                        <button type="button" class="btn  popover_button_skip" data-dismiss="modal" id="popDismissRedirect">CANCEL</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            if ($(window).width() < 750) {
+                $('#ibtext').css({ "margin": "60px 0px 5px 0px" });
+                $('div.header').css({ "height": "80px" });
+                $('#navMenu').css({ "left": "-999px", "position": "absolute" });
+            }
+
+
+            $(window).on('resize', function () {
+                if ($(window).width() < 750) {
+                    $('#ibtext').css({ "margin": "60px 0px 5px 0px" });
+                    $('div.header').css({ "height": "80px" });
+                    // toggleMenu();
+                }
+                else {
+                    $('#mobileNav p').text('SHOW NAVIGATION');
+                    $('#ibtext').css({ "margin": "95px 0px 0px 0px" });
+                    $('div.header').css({ "height": "120px" });
+                    // toggleMenu();
+                }
+            });
+
+            $('div#mobileNav').click(function () {
+                if ($(window).width() < 750) {
+                    toggleMenu();
+                    $('#navMenu div.SMChildrenBox').css("height", "");
+                }
+            });
+
+            function toggleMenu() {
+                if ($('#mobileNav p').text() == 'SHOW NAVIGATION') {
+                    $('#mobileNav p').text('HIDE NAVIGATION');
+                    $('#navMenu').css({ "left": "0px", "position": "relative" });
+                }
+                else {
+                    $('#mobileNav p').text('SHOW NAVIGATION');
+                    $('#navMenu').css({ "left": "-999px", "position": "absolute" });
+                }
+            }
+        </script>
+
+    
+
+<script type="text/javascript">
+<!--
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+// -->
+</script>
+<script type="text/javascript" src="wall_files/WebResource.axd"></script><script type="text/javascript">try {var oboutSMpro7 = new SlideMenu("pro7", "a_a", 30, false, "SMParent", "SMParentOver", "SMParentSelected", "SMChild", "SMChildOver", "SMChildSelected", "SMMenu", "SMChildrenBox", null, null, null, null, null, null, "SMImageParent", "SMImageChild", -1, 0, null, false);} catch(e) {}function f_pro7() {var i, j, o, oc, ob;o = document.getElementById("pro7");for(i = 0; i < o.childNodes.length; i++) {oc = o.childNodes[i];if(oc.id.substring(0, 2) != "__") {oc.onmouseover = function() {oboutSMpro7.mouseOverOutSelected(this.id, 1, true);};oc.onmouseout = function() {oboutSMpro7.mouseOverOutSelected(this.id, 0, true);};if(oc.onclick) {oboutSMpro7.addFunction(oc.onclick, oc.id);oc.onclick = function() {oboutSMpro7.parentClick(this.id); oboutSMpro7.getFunction(this.id)();};oc.firstChild.onclick = function() {oboutSMpro7.parentClick(this.parentElement.id); oboutSMpro7.getFunction(this.parentElement.id)();};}else {oc.onclick = function() {oboutSMpro7.parentClick(this.id);};oc.firstChild.onclick = function() {oboutSMpro7.parentClick(this.parentElement.id);};}} else for(j = 0; j < oc.childNodes.length; j++) {ob = oc.childNodes[j];ob.onmouseover = function() {oboutSMpro7.mouseOverOutSelected(this.id, 4, true);};ob.onmouseout = function() {oboutSMpro7.mouseOverOutSelected(this.id, 3, true);};if(ob.onclick) {oboutSMpro7.addFunction(ob.onclick, ob.id);ob.onclick = function() {oboutSMpro7.saveHidden(this.id); oboutSMpro7.getFunction(this.id)();};}else ob.onclick = function() {oboutSMpro7.saveHidden(this.id);};}}oboutSMpro7.buildMenu();}oboutSMpro7.SafeAddOnload(f_pro7, oboutSMpro7);oboutSMpro7.SafeAddOnload(function() {oboutSMpro7.collapseAll()}, oboutSMpro7);</script></form>
+
+
+<div class="keypad-popup" style="display: none;"></div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>
